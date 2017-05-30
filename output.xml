@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170526 01:02:07.876" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\MyWork\Robot\googl_search\google_search.robot" id="s1" name="Google Search">
+<test id="s1-t1" name="Search Google News">
+<kw name="Go To Google Home Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${GOOGLE URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170526 01:02:08.083" level="INFO">Opening browser 'Firefox' to base url 'https://www.google.com'</msg>
+<status status="PASS" endtime="20170526 01:02:16.535" starttime="20170526 01:02:08.083"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170526 01:02:16.608" starttime="20170526 01:02:16.535"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170526 01:02:16.609" starttime="20170526 01:02:16.608"></status>
+</kw>
+<status status="PASS" endtime="20170526 01:02:16.609" starttime="20170526 01:02:08.083"></status>
+</kw>
+<kw name="Google Home Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20170526 01:02:16.633" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" endtime="20170526 01:02:16.633" starttime="20170526 01:02:16.610"></status>
+</kw>
+<status status="PASS" endtime="20170526 01:02:16.634" starttime="20170526 01:02:16.609"></status>
+</kw>
+<kw name="Search for the Google News" library="resource">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=lst-ib</arg>
+<arg>${SEARCH TEXT}</arg>
+</arguments>
+<msg timestamp="20170526 01:02:16.635" level="INFO">Typing text 'Google News' into text field 'id=lst-ib'</msg>
+<status status="PASS" endtime="20170526 01:02:16.791" starttime="20170526 01:02:16.635"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>name=btnG</arg>
+</arguments>
+<msg timestamp="20170526 01:02:16.791" level="INFO">Clicking button 'name=btnG'.</msg>
+<status status="PASS" endtime="20170526 01:02:16.930" starttime="20170526 01:02:16.791"></status>
+</kw>
+<status status="PASS" endtime="20170526 01:02:16.930" starttime="20170526 01:02:16.634"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170526 01:02:17.289" starttime="20170526 01:02:16.931"></status>
+</kw>
+<status status="PASS" endtime="20170526 01:02:17.289" critical="yes" starttime="20170526 01:02:08.083"></status>
+</test>
+<test id="s1-t2" name="Go To Google News Page">
+<kw name="Go To Google News" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://news.google.com/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170526 01:02:17.289" level="INFO">Opening browser 'Firefox' to base url 'https://news.google.com/'</msg>
+<status status="PASS" endtime="20170526 01:02:25.798" starttime="20170526 01:02:17.289"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170526 01:02:25.867" starttime="20170526 01:02:25.798"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Recent</arg>
+</arguments>
+<msg timestamp="20170526 01:02:26.519" level="INFO">Current page contains text 'Recent'.</msg>
+<status status="PASS" endtime="20170526 01:02:26.520" starttime="20170526 01:02:25.867"></status>
+</kw>
+<status status="PASS" endtime="20170526 01:02:26.520" starttime="20170526 01:02:17.289"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170526 01:02:26.944" starttime="20170526 01:02:26.520"></status>
+</kw>
+<status status="PASS" endtime="20170526 01:02:26.944" critical="yes" starttime="20170526 01:02:17.289"></status>
+</test>
+<doc>A test suite with a single test Google Search.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" endtime="20170526 01:02:26.944" starttime="20170526 01:02:07.876"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Google Search" pass="2">Google Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
